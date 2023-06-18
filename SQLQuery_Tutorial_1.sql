@@ -106,7 +106,7 @@ JOIN tbl_works w ON e.employee_name = w.employee_name
 WHERE w.company_name = 'First Bank Corporation';
 ------------------------------------------------------------------------------------------------------------
 
--- Fetching name, street address and city of the employee that wotk for First Bank Corporation
+-- Fetching name, street address and city of the employee that wotk for First Bank Corporation and earns more than $4500
 
 SELECT employee_name, street, city FROM tbl_employee
 WHERE employee_name IN (SELECT employee_name FROM tbl_works WHERE company_name = 'First Bank Corporation' AND salary > 4500);
